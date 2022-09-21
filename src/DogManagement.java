@@ -165,7 +165,6 @@ public class DogManagement {
         }
     }
 
-
     //Welcome method that outputs introductory text explaining program
     public static void welcome(){
         System.out.println("Welcome, this program allows for a care attendant to be able to create, retrieve and update a dog record from the system.");
@@ -188,8 +187,4 @@ public class DogManagement {
 
         return menuOption;
     }
-
-  
-    
-
 }
