@@ -62,6 +62,7 @@ public class DogManagement {
     static Scanner scn = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
+        welcome();
         int menuOption = displayPrompt();
         
         while(menuOption != 4){
@@ -138,12 +139,19 @@ public class DogManagement {
         }
     }
     public static void updateDog() {
+        // Display a list of dogs from the database
+        for (int i = 0 ; i < dogCount ; i++ ){
+            System.out.println("ID #: " + dogsID[i] + " for " + dogsName[i]);
+        }
         System.out.println("Please enter the dog ID # to update record"); 
         int updateDogID = Integer.parseInt(scn.nextLine());
         int matchingIndex = -1;
+
+        // Finding matching index
         for (int i = 0 ; i < dogCount ; i++){
             if (dogsID[i] == updateDogID) matchingIndex = i;
         }
+        // If matching index is not found
         if (matchingIndex == -1) {
             System.out.println("Id # does not match dog id in system");
             return;
@@ -158,7 +166,8 @@ public class DogManagement {
             dogsWeight[matchingIndex] = weight;
             System.out.print("Enter dog age: "); int age = Integer.parseInt(scn.nextLine());
             dogsAge[matchingIndex] = age;
-
+            
+            // Updated information
             System.out.println("\n The following information has been updated:");
             System.out.println("\t ID #: " + dogsID[matchingIndex]);
             System.out.println("\t Name #: " + dogsName[matchingIndex]);
