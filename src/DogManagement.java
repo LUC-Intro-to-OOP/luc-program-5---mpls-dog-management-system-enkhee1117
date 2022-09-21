@@ -101,7 +101,7 @@ public class DogManagement {
         System.out.print("Enter dog age: "); age = Integer.parseInt(scn.nextLine());
 
         // Validation
-        
+
         // Creation:
         if (dogCount >= 12) return;
         dogsAge[dogCount] = age;
@@ -116,10 +116,12 @@ public class DogManagement {
         dogCount++;
     }
     public static void displayDog(){
+        // Display a list of dogs from the database
         for (int i = 0 ; i < dogCount ; i++ ){
             System.out.println("ID #: " + dogsID[i] + " for " + dogsName[i]);
         }
         System.out.print("Please enter ID # to from above to display record:"); 
+        // Get user input on ID to display
         int displayId = Integer.parseInt(scn.nextLine());
         int matchingIndex = -1;
         for (int i = 0 ; i < dogCount ; i++){
