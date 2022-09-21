@@ -87,7 +87,7 @@ public class DogManagement {
                     menuOption = displayPrompt();
             } //END OF SWITCH
         } // END of WHILE
-        System.out.println("Program has ended!");
+        System.out.println("Program has ended! \n");
     }
     public static void createDog(){
         int id;
