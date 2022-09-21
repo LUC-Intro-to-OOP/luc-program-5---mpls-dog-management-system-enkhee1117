@@ -101,7 +101,7 @@ public class DogManagement {
         System.out.print("Enter dog age: "); age = Integer.parseInt(scn.nextLine());
 
         // Validation
-
+        
         // Creation:
         if (dogCount >= 12) return;
         dogsAge[dogCount] = age;
